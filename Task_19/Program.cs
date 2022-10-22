@@ -24,7 +24,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 //проверка на положительное
 if (num < 0) { Console.WriteLine("Ошибка! Вы ввели отрицательно число!"); return; }
-else { Console.WriteLine($"Вы ввесли число: {num}"); }
+else { Console.WriteLine($"Вы ввели число: {num}"); }
 
 // проверка на пятизначное
 if ((num / 10000) > 0 && (num / 100000) == 0) { Console.WriteLine("Унаем яляется ли оно палидромом."); }
