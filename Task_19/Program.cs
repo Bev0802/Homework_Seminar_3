@@ -6,6 +6,25 @@
 12821 -> да
 23432 -> да 
 */
+//Функция с разворотом и сравнением.(рабочий, но длинный вариант) 
+//void PollidromCheckInverted(int num)
+//{
+//    int result = num % 10; int fifth = result * 10000;
+//
+//    result = num / 10; int fourth = (result % 10) * 1000;
+//    
+//    result = result / 10; int third = (result % 10) * 100;
+//    
+//    result = result / 10; int second = (result % 10) * 10;
+//    
+//    int first = result/ 10; 
+
+//    int inverted = fifth + fourth + third + second + first;
+
+//    if (inverted == num) { Console.WriteLine("Да, это палиндромом.");}
+//    else {Console.WriteLine("Нет, это не палиндромом.");}    
+//}
+
 //Функиця определения полидромного числа.
 void Pollidromcheck(int num)
 {
@@ -18,6 +37,7 @@ void Pollidromcheck(int num)
     else { Console.WriteLine("Нет, это не палиндромом."); }
 }
 
+
 //Тело программы
 Console.WriteLine("Введите пятизначное целое положительное число:");
 int num = Convert.ToInt32(Console.ReadLine());
@@ -27,8 +47,10 @@ if (num < 0) { Console.WriteLine("Ошибка! Вы ввели отрицате
 else { Console.WriteLine($"Вы ввели число: {num}"); }
 
 // проверка на пятизначное
-if ((num / 10000) > 0 && (num / 100000) == 0) { Console.WriteLine("Унаем яляется ли оно палидромом."); }
+if ((num / 10000) > 0 && (num / 100000) == 0) { Console.WriteLine("Узнаем яляется ли оно палидромом."); }
 else { Console.WriteLine("Ошибка! Ваше число не пятизначное! Попробуйте еще."); return; }
 
 //Вывод результата
+//PollidromCheckInverted(num);
+
 Pollidromcheck(num);
