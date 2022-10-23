@@ -7,38 +7,31 @@
 23432 -> да 
 */
 //Функция с разворотом и сравнением.(рабочий, но длинный вариант) 
-//void PollidromCheckInverted(int num)
+//void PollidromCheckInverted(int number)
 //{
-//    int result = num % 10; int fifth = result * 10000;
-//
-//    result = num / 10; int fourth = (result % 10) * 1000;
-//    
+//    int result = number % 10; int fifth = result * 10000;
+//    result = number / 10; int fourth = (result % 10) * 1000;
 //    result = result / 10; int third = (result % 10) * 100;
-//    
 //    result = result / 10; int second = (result % 10) * 10;
-//    
 //    int first = result/ 10; 
-
 //    int inverted = fifth + fourth + third + second + first;
-
-//    if (inverted == num) { Console.WriteLine("Да, это палиндромом.");}
+//    if (inverted == number) { Console.WriteLine("Да, это палиндромом.");}
 //    else {Console.WriteLine("Нет, это не палиндромом.");}    
 //}
 
 //Функиця определения полидромного числа.
-void Pollidromcheck(int num)
+void Pollidromcheck(int number)
 {
-    int first = num % 10;
-    int second = num % 100 / 10;
-    int fifth = num / 10000;
-    int fourth = num / 1000 % 10;
+    int first = number % 10;
+    int second = number % 100 / 10;
+    int fifth = number / 10000;
+    int fourth = number / 1000 % 10;
 
     if (first == fifth && second == fourth) { Console.WriteLine("Да, это палиндромом."); }
     else { Console.WriteLine("Нет, это не палиндромом."); }
 }
 
-
-//Тело программы
+////////////////Тело программы
 Console.WriteLine("Введите пятизначное целое положительное число:");
 int num = Convert.ToInt32(Console.ReadLine());
 
